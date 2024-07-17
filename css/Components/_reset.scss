@@ -1,0 +1,68 @@
+@import "mixins";
+
+$main: #2196f3;
+$second: #ececec;
+$third: #d5d5d5;
+$text: #777;
+$white: #fff;
+$black: #222;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+button,
+input,
+textarea {
+  border: none;
+  outline: non;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: $main;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $black;
+}
+
+.container {
+  width: 85%;
+  margin: auto;
+}
+
+.container {
+  margin: auto;
+  @include breakpoint(mobile) {
+    width: 95%;
+  }
+  @include breakpoint(small) {
+    width: 85%;
+  }
+  @include breakpoint(medium) {
+    width: 82%;
+  }
+  @include breakpoint(large) {
+    width: 80%;
+  }
+}

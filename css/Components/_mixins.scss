@@ -1,0 +1,58 @@
+@mixin breakpoint($device) {
+  @if $device == mobile {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $device == small {
+    @media (min-width: 767px) and (max-width: 991px) {
+      @content;
+    }
+  } @else if $device == medium {
+    @media (min-width: 992px) and (max-width: 1199px) {
+      @content;
+    }
+  } @else if $device == large {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+}
+
+@mixin centering {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin shadow {
+  box-shadow: 0 0 20px #3334;
+}
+
+@mixin SectionPadding {
+  padding: 60px 0;
+}
+@mixin SimplePadding {
+  padding: 8px 16px;
+}
+@mixin HardPadding {
+  padding: 16px;
+}
+
+@mixin Shadow {
+  box-shadow: 0px 0px 8px #5555558e;
+}
+
+@mixin SimpleShadow {
+  box-shadow: 0px 0px 8px #5555553a;
+}
+
+@mixin grid300 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 48px;
+}
+@mixin grid240 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 32px;
+}
