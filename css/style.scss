@@ -19,6 +19,7 @@ section:not(.landing) {
   line-height: 55px;
   transition: 0.3s;
   animation: upBtn 0.4s alternate infinite;
+  z-index: 98;
   &:hover {
     background-color: #0070d0;
   }
@@ -59,11 +60,15 @@ nav {
           position: relative;
           color: $black;
           @include breakpoint(mobile) {
-            padding: 16px;
+            padding: 12px;
+            font-size: 1rem;
           }
           &:hover {
             background-color: #fafafa;
             color: $main;
+            &::before {
+              width: 100%;
+            }
           }
           &::before {
             position: absolute;
@@ -74,9 +79,6 @@ nav {
             left: 0;
             top: 0;
             transition: 0.3s;
-          }
-          &:hover::before {
-            width: 100%;
           }
         }
       }
@@ -95,18 +97,43 @@ nav {
       justify-content: space-between;
       z-index: 88;
       animation: drop 0.5s;
+      @include breakpoint(mobile) {
+        justify-content: center;
+      }
+      @include breakpoint(small) {
+        justify-content: center;
+      }
       img {
         width: 40%;
+        @include breakpoint(mobile) {
+          display: none;
+        }
+        @include breakpoint(small) {
+          display: none;
+        }
       }
       > div.dropLinks {
         width: 50%;
         display: flex;
         justify-content: space-between;
         gap: 20px;
+        @include breakpoint(mobile) {
+          justify-content: space-between;
+          gap: 24px;
+          width: 100%;
+        }
+        @include breakpoint(small) {
+          justify-content: space-between;
+          gap: 96px;
+          width: 100%;
+        }
         > ul {
           width: 100%;
           > li {
             position: relative;
+            @include breakpoint(mobile) {
+              width: 100%;
+            }
             > a {
               display: block;
               padding: 16px 0 16px 48px;
@@ -114,6 +141,11 @@ nav {
               font-weight: 800;
               position: relative;
               color: $main;
+              @include breakpoint(mobile) {
+                width: 100%;
+                font-size: 0.9rem;
+                font-weight: 500;
+              }
               &::before {
                 position: absolute;
                 content: "";
@@ -230,6 +262,7 @@ section.landing {
     left: 0;
     bottom: -30px;
     clip-path: ellipse(140% 50% at 130% 100%);
+    z-index: 99;
   }
 }
 
@@ -454,13 +487,14 @@ section.testimonials {
   background-color: $second;
   > div {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 48px;
     > div {
       position: relative;
       background-color: $white;
       @include HardPadding;
       border-radius: 4px;
+
       img {
         position: absolute;
         top: -30px;
@@ -486,10 +520,14 @@ section.testimonials {
 
 section.team {
   > div {
-    @include grid300;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 380px);
+    gap: 24px;
+    justify-content: center;
     > .card {
       position: relative;
       height: 480px;
+
       img {
         position: absolute;
         border-radius: 16px;
@@ -508,6 +546,7 @@ section.team {
         display: flex;
         align-items: flex-end;
         border-radius: 24px;
+
         .info {
           @include SimplePadding;
           h3 {
@@ -615,12 +654,18 @@ section.skills {
     > .image {
       width: 40%;
       padding: 20px;
+      @include breakpoint(mobile) {
+        display: none;
+      }
       img {
         max-width: 100%;
       }
     }
     > .Skills {
       width: 60%;
+      @include breakpoint(mobile) {
+        width: 100%;
+      }
       > .Skill {
         width: 100%;
         margin-bottom: 24px;
@@ -669,12 +714,24 @@ section.how {
     > .image {
       width: 45%;
       padding: 20px;
+      @include breakpoint(mobile) {
+        display: none;
+      }
+      @include breakpoint(small) {
+        display: none;
+      }
       img {
         max-width: 100%;
       }
     }
     .work-steps {
       width: 55%;
+      @include breakpoint(mobile) {
+        width: 100%;
+      }
+      @include breakpoint(small) {
+        width: 100%;
+      }
       > .step {
         background-color: #f4f4f4;
         padding: 32px;
@@ -685,14 +742,25 @@ section.how {
         border: 3px solid $white;
         border-radius: 8px;
         transition: 0.4s;
+        @include breakpoint(mobile) {
+          flex-direction: column;
+        }
         > .image {
           width: 12%;
+          @include breakpoint(mobile) {
+            width: 50px;
+            margin: auto;
+          }
           img {
             max-width: 100%;
           }
         }
         > .info {
           width: 85%;
+          @include breakpoint(mobile) {
+            width: 100%;
+            text-align: center;
+          }
           h2 {
             margin-bottom: 16px;
           }
@@ -715,6 +783,12 @@ section.events {
     align-items: center;
     > .image {
       width: 40%;
+      @include breakpoint(mobile) {
+        display: none;
+      }
+      @include breakpoint(small) {
+        display: none;
+      }
       img {
         max-width: 100%;
       }
@@ -724,11 +798,23 @@ section.events {
       text-align: center;
       display: flex;
       flex-direction: column;
+
       gap: 32px;
+      @include breakpoint(mobile) {
+        width: 100%;
+      }
+      @include breakpoint(small) {
+        width: 100%;
+      }
       > .time {
         margin: auto;
         display: flex;
         gap: 16px;
+        @include breakpoint(mobile) {
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+        }
         > div {
           text-align: center;
           min-width: 100px;
@@ -751,6 +837,9 @@ section.events {
       }
       > h2 {
         font-size: 2rem;
+        @include breakpoint(mobile) {
+          font-size: 1.5rem;
+        }
       }
       > p {
         width: 80%;
@@ -823,8 +912,14 @@ section.videos {
   > div {
     border: 2px solid $second;
     display: flex;
+    @include breakpoint(mobile) {
+      flex-direction: column;
+    }
     .left {
       width: 25%;
+      @include breakpoint(mobile) {
+        width: 100%;
+      }
       > h4 {
         @include HardPadding;
         display: flex;
@@ -866,6 +961,9 @@ section.videos {
       padding: 8px;
       background-color: $second;
       border-left: 1px solid $third;
+      @include breakpoint(mobile) {
+        width: 100%;
+      }
       img {
         max-width: 100%;
       }
@@ -886,6 +984,9 @@ main {
     user-select: none;
     letter-spacing: 1.1px;
     font-size: 2rem;
+    @include breakpoint(mobile) {
+      font-size: 1.5rem;
+    }
   }
 }
 
@@ -953,6 +1054,12 @@ section.stats {
 section.discount {
   display: flex;
   padding: 0;
+  @include breakpoint(mobile) {
+    flex-direction: column;
+  }
+  @include breakpoint(small) {
+    flex-direction: column;
+  }
   .disc {
     background-color: $main;
     display: flex;
@@ -963,8 +1070,17 @@ section.discount {
     padding: 72px;
     width: 50%;
     color: $white;
+    @include breakpoint(mobile) {
+      width: 100%;
+    }
+    @include breakpoint(small) {
+      width: 100%;
+    }
     > h2 {
-      font-size: 3rem;
+      font-size: 2.5rem;
+      @include breakpoint(mobile) {
+        font-size: 1.5rem;
+      }
     }
     > p {
       width: 80%;
@@ -982,8 +1098,19 @@ section.discount {
     align-items: center;
     justify-content: center;
     gap: 48px;
+    padding-top: 72px;
+    padding-bottom: 72px;
+    @include breakpoint(mobile) {
+      width: 100%;
+    }
+    @include breakpoint(small) {
+      width: 100%;
+    }
     > h2 {
-      font-size: 3rem;
+      font-size: 2.5rem;
+      @include breakpoint(mobile) {
+        font-size: 2rem;
+      }
     }
     > form {
       display: flex;

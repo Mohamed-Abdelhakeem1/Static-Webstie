@@ -54,7 +54,7 @@ textarea {
 .container {
   margin: auto;
   @include breakpoint(mobile) {
-    width: 95%;
+    width: 90%;
   }
   @include breakpoint(small) {
     width: 85%;

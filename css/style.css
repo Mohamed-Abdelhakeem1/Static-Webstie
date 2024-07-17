@@ -46,25 +46,21 @@ textarea {
 .container {
   margin: auto;
 }
-
 @media (max-width: 767px) {
   .container {
-    width: 95%;
+    width: 90%;
   }
 }
-
 @media (min-width: 767px) and (max-width: 991px) {
   .container {
     width: 85%;
   }
 }
-
 @media (min-width: 992px) and (max-width: 1199px) {
   .container {
     width: 82%;
   }
 }
-
 @media (min-width: 1200px) {
   .container {
     width: 80%;
@@ -75,46 +71,38 @@ textarea {
   from {
     transform: translateY(-20px);
   }
-
   to {
     transform: translateY(20px);
   }
 }
-
 @keyframes upAndDown5 {
   from {
     transform: translateY(-5px);
   }
-
   to {
     transform: translateY(5px);
   }
 }
-
 @keyframes arrowRight {
   from {
     transform: translateX(0);
   }
-
   to {
     transform: translateX(8px);
   }
 }
-
 @keyframes drop {
   from {
     transform: translateY(40px);
     opacity: 0.2;
     filter: blur(8px);
   }
-
   to {
     transform: translateX(0);
     opacity: 1;
     filter: blur(0);
   }
 }
-
 @keyframes before {
   50% {
     left: 0;
@@ -122,7 +110,6 @@ textarea {
     width: 12px;
     height: 12px;
   }
-
   100% {
     left: 0;
     border-radius: 8px;
@@ -130,7 +117,6 @@ textarea {
     height: 100%;
   }
 }
-
 @keyframes after {
   50% {
     right: 0;
@@ -138,7 +124,6 @@ textarea {
     width: 12px;
     height: 12px;
   }
-
   100% {
     right: 0;
     border-radius: 8px;
@@ -146,17 +131,14 @@ textarea {
     height: 100%;
   }
 }
-
 @keyframes upBtn {
   from {
     bottom: 20px;
   }
-
   to {
     bottom: 25px;
   }
 }
-
 section:not(.landing) {
   padding: 60px 0;
 }
@@ -174,13 +156,12 @@ section:not(.landing) {
   line-height: 55px;
   transition: 0.3s;
   animation: upBtn 0.4s alternate infinite;
+  z-index: 98;
 }
-
 #topBtn:hover {
   background-color: #0070d0;
 }
-
-#topBtn>i {
+#topBtn > i {
   font-size: 1.5rem;
   color: #fff;
 }
@@ -191,33 +172,28 @@ nav {
   position: relative;
   z-index: 2;
 }
-
-nav>div {
+nav > div {
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: #222;
 }
-
 @media (max-width: 767px) {
-  nav>div {
+  nav > div {
     flex-direction: column;
   }
 }
-
-nav>div .logo a {
+nav > div .logo a {
   font-size: 2rem;
   color: #2196f3;
   cursor: pointer;
   font-weight: 900;
 }
-
-nav>div>ul {
+nav > div > ul {
   display: flex;
 }
-
-nav>div>ul>li>a {
+nav > div > ul > li > a {
   padding: 24px;
   display: block;
   font-size: 1.25rem;
@@ -225,19 +201,20 @@ nav>div>ul>li>a {
   position: relative;
   color: #222;
 }
-
 @media (max-width: 767px) {
-  nav>div>ul>li>a {
-    padding: 16px;
+  nav > div > ul > li > a {
+    padding: 12px;
+    font-size: 1rem;
   }
 }
-
-nav>div>ul>li>a:hover {
+nav > div > ul > li > a:hover {
   background-color: #fafafa;
   color: #2196f3;
 }
-
-nav>div>ul>li>a::before {
+nav > div > ul > li > a:hover::before {
+  width: 100%;
+}
+nav > div > ul > li > a::before {
   position: absolute;
   content: "";
   width: 0;
@@ -247,12 +224,7 @@ nav>div>ul>li>a::before {
   top: 0;
   transition: 0.3s;
 }
-
-nav>div>ul>li>a:hover::before {
-  width: 100%;
-}
-
-nav>div>aside {
+nav > div > aside {
   display: flex;
   display: none;
   position: absolute;
@@ -267,27 +239,61 @@ nav>div>aside {
   z-index: 88;
   animation: drop 0.5s;
 }
-
-nav>div>aside img {
+@media (max-width: 767px) {
+  nav > div > aside {
+    justify-content: center;
+  }
+}
+@media (min-width: 767px) and (max-width: 991px) {
+  nav > div > aside {
+    justify-content: center;
+  }
+}
+nav > div > aside img {
   width: 40%;
 }
-
-nav>div>aside>div.dropLinks {
+@media (max-width: 767px) {
+  nav > div > aside img {
+    display: none;
+  }
+}
+@media (min-width: 767px) and (max-width: 991px) {
+  nav > div > aside img {
+    display: none;
+  }
+}
+nav > div > aside > div.dropLinks {
   width: 50%;
   display: flex;
   justify-content: space-between;
   gap: 20px;
 }
-
-nav>div>aside>div.dropLinks>ul {
+@media (max-width: 767px) {
+  nav > div > aside > div.dropLinks {
+    justify-content: space-between;
+    gap: 24px;
+    width: 100%;
+  }
+}
+@media (min-width: 767px) and (max-width: 991px) {
+  nav > div > aside > div.dropLinks {
+    justify-content: space-between;
+    gap: 96px;
+    width: 100%;
+  }
+}
+nav > div > aside > div.dropLinks > ul {
   width: 100%;
 }
-
-nav>div>aside>div.dropLinks>ul>li {
+nav > div > aside > div.dropLinks > ul > li {
   position: relative;
 }
-
-nav>div>aside>div.dropLinks>ul>li>a {
+@media (max-width: 767px) {
+  nav > div > aside > div.dropLinks > ul > li {
+    width: 100%;
+  }
+}
+nav > div > aside > div.dropLinks > ul > li > a {
   display: block;
   padding: 16px 0 16px 48px;
   text-transform: capitalize;
@@ -295,8 +301,14 @@ nav>div>aside>div.dropLinks>ul>li>a {
   position: relative;
   color: #2196f3;
 }
-
-nav>div>aside>div.dropLinks>ul>li>a::before {
+@media (max-width: 767px) {
+  nav > div > aside > div.dropLinks > ul > li > a {
+    width: 100%;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+}
+nav > div > aside > div.dropLinks > ul > li > a::before {
   position: absolute;
   content: "";
   width: 0;
@@ -308,16 +320,13 @@ nav>div>aside>div.dropLinks>ul>li>a::before {
   transition: 0.5s;
   z-index: -1;
 }
-
-nav>div>aside>div.dropLinks>ul>li>a:hover::before {
+nav > div > aside > div.dropLinks > ul > li > a:hover::before {
   width: 100%;
 }
-
-nav>div>aside>div.dropLinks>ul>li:not(:last-child)>a {
+nav > div > aside > div.dropLinks > ul > li:not(:last-child) > a {
   border-bottom: 1px solid #2196f3;
 }
-
-nav>div>aside>div.dropLinks>ul>li>i {
+nav > div > aside > div.dropLinks > ul > li > i {
   position: absolute;
   left: 10px;
   top: 48%;
@@ -326,8 +335,7 @@ nav>div>aside>div.dropLinks>ul>li>i {
   font-size: 1.25rem;
   color: #2196f3;
 }
-
-nav>div>aside.active {
+nav > div > aside.active {
   display: flex;
 }
 
@@ -336,34 +344,30 @@ section.landing {
   height: 90vh;
   position: relative;
 }
-
-section.landing>div {
+section.landing > div {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100%;
   position: relative;
 }
-
 @media (max-width: 767px) {
-  section.landing>div {
+  section.landing > div {
     flex-direction: column;
     justify-content: center;
     gap: 50px;
     text-align: center;
   }
 }
-
 @media (min-width: 767px) and (max-width: 991px) {
-  section.landing>div {
+  section.landing > div {
     flex-direction: column;
     justify-content: center;
     gap: 50px;
     text-align: center;
   }
 }
-
-section.landing>div .arrow {
+section.landing > div .arrow {
   display: block;
   position: relative;
   z-index: 9;
@@ -373,53 +377,44 @@ section.landing>div .arrow {
   left: 49%;
   animation: upAndDown5 1s alternate-reverse linear infinite;
 }
-
-section.landing>div .arrow i {
+section.landing > div .arrow i {
   font-size: 2rem;
   position: absolute;
   bottom: 0;
   left: 0;
   color: #2196f3;
 }
-
-section.landing>div .arrow i:last-child {
+section.landing > div .arrow i:last-child {
   bottom: 12px;
 }
-
-section.landing>div .info h1 {
+section.landing > div .info h1 {
   color: #222;
   font-weight: 800;
 }
-
-section.landing>div .info p {
+section.landing > div .info p {
   width: 80%;
   line-height: 1.5;
   color: #777;
   font-size: 1.4rem;
 }
-
 @media (max-width: 767px) {
-  section.landing>div .info p {
+  section.landing > div .info p {
     width: 100%;
   }
 }
-
 @media (min-width: 767px) and (max-width: 991px) {
-  section.landing>div .info p {
+  section.landing > div .info p {
     width: 100%;
   }
 }
-
-section.landing>div .img {
+section.landing > div .img {
   max-width: 50%;
 }
-
-section.landing>div .img img {
+section.landing > div .img img {
   max-width: 100%;
   transform: translateY(-20px);
   animation: upAndDown 1.4s ease-in-out alternate infinite;
 }
-
 section.landing::after {
   position: absolute;
   content: "";
@@ -429,7 +424,8 @@ section.landing::after {
   left: 0;
   bottom: -30px;
   -webkit-clip-path: ellipse(140% 50% at 130% 100%);
-  clip-path: ellipse(140% 50% at 130% 100%);
+          clip-path: ellipse(140% 50% at 130% 100%);
+  z-index: 99;
 }
 
 header h2 {
@@ -445,14 +441,11 @@ header h2 {
   z-index: 1;
   transition: 0.4s;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   letter-spacing: 1.1px;
 }
-
-header h2::before,
-header section.services>div .card>h2.info::after,
-section.services>div header .card>h2.info::after {
+header h2::before, header section.services > div .card > h2.info::after, section.services > div header .card > h2.info::after {
   position: absolute;
   content: "";
   width: 12px;
@@ -463,7 +456,6 @@ section.services>div header .card>h2.info::after {
   transform: translateY(-50%);
   left: -30px;
 }
-
 header h2::after {
   position: absolute;
   content: "";
@@ -475,19 +467,14 @@ header h2::after {
   transform: translateY(-50%);
   right: -30px;
 }
-
-header h2:hover::before,
-header section.services>div .card>h2.info:hover::after,
-section.services>div header .card>h2.info:hover::after {
+header h2:hover::before, header section.services > div .card > h2.info:hover::after, section.services > div header .card > h2.info:hover::after {
   animation: before 0.4s forwards linear;
   z-index: -1;
 }
-
 header h2:hover::after {
   animation: after 0.4s forwards linear;
   z-index: -1;
 }
-
 header h2:hover {
   color: #fff;
   transition-delay: 0.1s;
@@ -495,45 +482,38 @@ header h2:hover {
   border-radius: 10px;
 }
 
-section.articles>div {
+section.articles > div {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 48px;
 }
-
-section.articles>div .article {
+section.articles > div .article {
   box-shadow: 0 0 20px rgba(51, 51, 51, 0.2666666667);
   background-color: #fff;
   border-radius: 8px;
   transition: 0.3s;
 }
-
-section.articles>div .article img {
+section.articles > div .article img {
   max-width: 100%;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
-
-section.articles>div .article .card {
+section.articles > div .article .card {
   padding: 8px 16px;
 }
-
-section.articles>div .article .card>h4 {
+section.articles > div .article .card > h4 {
   color: #222;
   margin-bottom: 12px;
 }
-
-section.articles>div .article .card>p {
+section.articles > div .article .card > p {
   color: #777;
   line-height: 1.5;
 }
-
-section.articles>div .article hr {
+section.articles > div .article hr {
   border: 0.1px solid #777;
   height: 0.1px;
 }
-
-section.articles>div .article button {
+section.articles > div .article button {
   padding: 16px;
   display: flex;
   width: 100%;
@@ -541,38 +521,31 @@ section.articles>div .article button {
   cursor: pointer;
   transition: 0.5s;
 }
-
-section.articles>div .article button p {
+section.articles > div .article button p {
   color: #2196f3;
 }
-
-section.articles>div .article button i {
+section.articles > div .article button i {
   color: #2196f3;
 }
-
-section.articles>div .article button:hover {
+section.articles > div .article button:hover {
   background-color: #ececec;
 }
-
-section.articles>div .article button:hover>i {
+section.articles > div .article button:hover > i {
   animation: arrowRight 0.5s infinite;
 }
-
-section.articles>div .article:hover {
+section.articles > div .article:hover {
   transform: translateY(-8px);
 }
 
 section.gallery {
   background-color: #ececec;
 }
-
-section.gallery>div {
+section.gallery > div {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 72px;
 }
-
-section.gallery>div>.card {
+section.gallery > div > .card {
   box-shadow: 0 0 20px rgba(51, 51, 51, 0.2666666667);
   width: 100%;
   background-color: #fff;
@@ -580,39 +553,33 @@ section.gallery>div>.card {
   border: 12px solid #fff;
   position: relative;
 }
-
-section.gallery>div>.card img {
+section.gallery > div > .card img {
   max-width: 100%;
   transition: 0.5s;
 }
-
-section.gallery>div>.card img:hover {
+section.gallery > div > .card img:hover {
   transform: rotateZ(6deg) scale(1.14);
 }
 
-section.features>div {
+section.features > div {
   display: flex;
   flex-wrap: wrap;
   gap: 48px;
   justify-content: center;
 }
-
-section.features>div>.card {
+section.features > div > .card {
   width: 350px;
   border: 1px solid #2196f3;
   box-shadow: 0px 0px 8px rgba(85, 85, 85, 0.2274509804);
 }
-
-section.features>div>.card .image {
+section.features > div > .card .image {
   position: relative;
 }
-
-section.features>div>.card .image img {
+section.features > div > .card .image img {
   max-width: 100%;
   height: 100%;
 }
-
-section.features>div>.card .image::after {
+section.features > div > .card .image::after {
   position: absolute;
   content: "";
   background-color: #fff;
@@ -623,15 +590,13 @@ section.features>div>.card .image::after {
   height: 50%;
   transition: 0.3s;
   -webkit-clip-path: polygon(100% 0%, 100% 100%, 0 100%);
-  clip-path: polygon(100% 0%, 100% 100%, 0 100%);
+          clip-path: polygon(100% 0%, 100% 100%, 0 100%);
 }
-
-section.features>div>.card .body {
+section.features > div > .card .body {
   text-align: center;
   padding: 16px;
 }
-
-section.features>div>.card .body h2 {
+section.features > div > .card .body h2 {
   color: #222;
   font-size: 3rem;
   width: -moz-fit-content;
@@ -640,15 +605,13 @@ section.features>div>.card .body h2 {
   margin: auto;
   padding-bottom: 16px;
 }
-
-section.features>div>.card .body p {
+section.features > div > .card .body p {
   color: #777;
   margin-top: 30px;
   margin-bottom: 30px;
   line-height: 1.5;
 }
-
-section.features>div>.card .body button {
+section.features > div > .card .body button {
   padding: 8px 16px;
   font-size: 1.5rem;
   font-weight: 600;
@@ -660,8 +623,7 @@ section.features>div>.card .body button {
   transition: 0.3s;
   margin-bottom: 24px;
 }
-
-section.features>div>.card .body button::after {
+section.features > div > .card .body button::after {
   position: absolute;
   content: "";
   top: 0;
@@ -672,38 +634,32 @@ section.features>div>.card .body button::after {
   z-index: -1;
   transition: 0.3s;
 }
-
-section.features>div>.card:hover div.body>button {
+section.features > div > .card:hover div.body > button {
   color: #fff;
 }
-
-section.features>div>.card:hover div.body>button::after {
+section.features > div > .card:hover div.body > button::after {
   width: 100%;
 }
-
-section.features>div>.card:hover div.image::after {
+section.features > div > .card:hover div.image::after {
   -webkit-clip-path: polygon(0% 50%, 100% 100%, 0 100%);
-  clip-path: polygon(0% 50%, 100% 100%, 0 100%);
+          clip-path: polygon(0% 50%, 100% 100%, 0 100%);
 }
 
 section.testimonials {
   background-color: #ececec;
 }
-
-section.testimonials>div {
+section.testimonials > div {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 48px;
 }
-
-section.testimonials>div>div {
+section.testimonials > div > div {
   position: relative;
   background-color: #fff;
   padding: 16px;
   border-radius: 4px;
 }
-
-section.testimonials>div>div img {
+section.testimonials > div > div img {
   position: absolute;
   top: -30px;
   right: -30px;
@@ -712,32 +668,28 @@ section.testimonials>div>div img {
   height: 120px;
   border: 12px solid #ececec;
 }
-
-section.testimonials>div>div p {
+section.testimonials > div > div p {
   color: #777;
   margin-top: 12px;
 }
-
-section.testimonials>div>div>.stars {
+section.testimonials > div > div > .stars {
   margin-top: 12px;
 }
-
-section.testimonials>div>div>.stars .fa-solid {
+section.testimonials > div > div > .stars .fa-solid {
   color: #ffc107;
 }
 
-section.team>div {
+section.team > div {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 48px;
+  grid-template-columns: repeat(auto-fill, 380px);
+  gap: 24px;
+  justify-content: center;
 }
-
-section.team>div>.card {
+section.team > div > .card {
   position: relative;
   height: 480px;
 }
-
-section.team>div>.card img {
+section.team > div > .card img {
   position: absolute;
   border-radius: 16px;
   width: 320px;
@@ -746,8 +698,7 @@ section.team>div>.card img {
   top: 45%;
   transform: translateY(-50%);
 }
-
-section.team>div>.card .box {
+section.team > div > .card .box {
   padding: 8px 16px;
   width: 80%;
   margin-left: 20%;
@@ -757,22 +708,18 @@ section.team>div>.card .box {
   align-items: flex-end;
   border-radius: 24px;
 }
-
-section.team>div>.card .box .info {
+section.team > div > .card .box .info {
   padding: 8px 16px;
 }
-
-section.team>div>.card .box .info h3 {
+section.team > div > .card .box .info h3 {
   color: #2196f3;
   font-size: 1.5rem;
 }
-
-section.team>div>.card .box .info p {
+section.team > div > .card .box .info p {
   margin-top: 12px;
   color: #777;
 }
-
-section.team>div>.card .social {
+section.team > div > .card .social {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -782,35 +729,31 @@ section.team>div>.card .social {
   align-items: center;
   gap: 20px;
 }
-
-section.team>div>.card .social i {
+section.team > div > .card .social i {
   padding: 4px;
   cursor: pointer;
   color: #777;
   font-size: 1.25rem;
 }
-
-section.team>div>.card .social i:hover {
+section.team > div > .card .social i:hover {
   color: #2196f3;
 }
 
 section.services {
   background-color: #ececec;
 }
-
-section.services>div {
+section.services > div {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 48px;
+  justify-content: center;
 }
-
-section.services>div .card {
+section.services > div .card {
   background-color: #fff;
   transition: 0.4s;
   box-shadow: 0 0 20px rgba(51, 51, 51, 0.2666666667);
 }
-
-section.services>div .card>.icon {
+section.services > div .card > .icon {
   display: flex;
   flex-direction: column;
   height: 80%;
@@ -819,17 +762,14 @@ section.services>div .card>.icon {
   gap: 24px;
   padding: 48px 0;
 }
-
-section.services>div .card>.icon i {
+section.services > div .card > .icon i {
   color: #d5d5d5;
   font-size: 4rem;
 }
-
-section.services>div .card>.icon>h2 {
+section.services > div .card > .icon > h2 {
   color: #2196f3;
 }
-
-section.services>div .card>.info {
+section.services > div .card > .info {
   background-color: #f7f7f7;
   display: flex;
   justify-content: space-between;
@@ -838,20 +778,16 @@ section.services>div .card>.info {
   padding: 16px;
   position: relative;
 }
-
-section.services>div .card>.info h2 {
+section.services > div .card > .info h2 {
   font-size: 2rem;
   color: #fff;
   z-index: 2;
 }
-
-section.services>div .card>.info button {
+section.services > div .card > .info button {
   color: #2196f3;
   cursor: pointer;
 }
-
-section.services>div .card>.info::before,
-section.services>div .card>.info::after {
+section.services > div .card > .info::before, section.services > div .card > .info::after {
   position: absolute;
   content: "";
   left: 0;
@@ -860,58 +796,58 @@ section.services>div .card>.info::after {
   height: 100%;
   background-color: #d5d5d5;
   -webkit-clip-path: polygon(0% 0%, 100% 0%, 83% 100%, 0% 100%);
-  clip-path: polygon(0% 0%, 100% 0%, 83% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 100% 0%, 83% 100%, 0% 100%);
 }
-
-section.services>div .card>.info::after {
+section.services > div .card > .info::after {
   width: 20%;
   background-color: #2196f3;
   -webkit-clip-path: polygon(0% 0%, 100% 0%, 80% 100%, 0% 100%);
-  clip-path: polygon(0% 0%, 100% 0%, 80% 100%, 0% 100%);
+          clip-path: polygon(0% 0%, 100% 0%, 80% 100%, 0% 100%);
 }
-
-section.services>div .card:hover {
+section.services > div .card:hover {
   transform: translateY(-10px);
 }
 
-section.skills>div {
+section.skills > div {
   display: flex;
   align-items: center;
 }
-
-section.skills>div>.image {
+section.skills > div > .image {
   width: 40%;
   padding: 20px;
 }
-
-section.skills>div>.image img {
+@media (max-width: 767px) {
+  section.skills > div > .image {
+    display: none;
+  }
+}
+section.skills > div > .image img {
   max-width: 100%;
 }
-
-section.skills>div>.Skills {
+section.skills > div > .Skills {
   width: 60%;
 }
-
-section.skills>div>.Skills>.Skill {
+@media (max-width: 767px) {
+  section.skills > div > .Skills {
+    width: 100%;
+  }
+}
+section.skills > div > .Skills > .Skill {
   width: 100%;
   margin-bottom: 24px;
   position: relative;
 }
-
-section.skills>div>.Skills>.Skill>h3 {
+section.skills > div > .Skills > .Skill > h3 {
   color: #222;
 }
-
-section.skills>div>.Skills>.Skill>div {
+section.skills > div > .Skills > .Skill > div {
   width: 100%;
   background-color: #ececec;
   height: 30px;
   margin-top: 14px;
   position: relative;
 }
-
-section.skills>div>.Skills>.Skill>div::before,
-section.services.skills>div>.Skills>.card.Skill>div.info::after {
+section.skills > div > .Skills > .Skill > div::before, section.services.skills > div > .Skills > .card.Skill > div.info::after {
   position: absolute;
   content: "";
   top: 0;
@@ -920,8 +856,7 @@ section.services.skills>div>.Skills>.card.Skill>div.info::after {
   background-color: #2196f3;
   width: 80%;
 }
-
-section.skills>div>.Skills>.Skill::after {
+section.skills > div > .Skills > .Skill::after {
   position: absolute;
   content: attr(data-skill);
   top: 0;
@@ -936,27 +871,42 @@ section.skills>div>.Skills>.Skill::after {
 section.how {
   background-color: #ececec;
 }
-
-section.how>div {
+section.how > div {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
-section.how>div>.image {
+section.how > div > .image {
   width: 45%;
   padding: 20px;
 }
-
-section.how>div>.image img {
+@media (max-width: 767px) {
+  section.how > div > .image {
+    display: none;
+  }
+}
+@media (min-width: 767px) and (max-width: 991px) {
+  section.how > div > .image {
+    display: none;
+  }
+}
+section.how > div > .image img {
   max-width: 100%;
 }
-
-section.how>div .work-steps {
+section.how > div .work-steps {
   width: 55%;
 }
-
-section.how>div .work-steps>.step {
+@media (max-width: 767px) {
+  section.how > div .work-steps {
+    width: 100%;
+  }
+}
+@media (min-width: 767px) and (max-width: 991px) {
+  section.how > div .work-steps {
+    width: 100%;
+  }
+}
+section.how > div .work-steps > .step {
   background-color: #f4f4f4;
   padding: 32px;
   display: flex;
@@ -967,87 +917,120 @@ section.how>div .work-steps>.step {
   border-radius: 8px;
   transition: 0.4s;
 }
-
-section.how>div .work-steps>.step>.image {
+@media (max-width: 767px) {
+  section.how > div .work-steps > .step {
+    flex-direction: column;
+  }
+}
+section.how > div .work-steps > .step > .image {
   width: 12%;
 }
-
-section.how>div .work-steps>.step>.image img {
+@media (max-width: 767px) {
+  section.how > div .work-steps > .step > .image {
+    width: 50px;
+    margin: auto;
+  }
+}
+section.how > div .work-steps > .step > .image img {
   max-width: 100%;
 }
-
-section.how>div .work-steps>.step>.info {
+section.how > div .work-steps > .step > .info {
   width: 85%;
 }
-
-section.how>div .work-steps>.step>.info h2 {
+@media (max-width: 767px) {
+  section.how > div .work-steps > .step > .info {
+    width: 100%;
+    text-align: center;
+  }
+}
+section.how > div .work-steps > .step > .info h2 {
   margin-bottom: 16px;
 }
-
-section.how>div .work-steps>.step>.info>p {
+section.how > div .work-steps > .step > .info > p {
   color: #777;
   line-height: 1.5;
 }
-
-section.how>div .work-steps>.step:hover {
+section.how > div .work-steps > .step:hover {
   background-color: #ececec;
 }
 
-section.events>div {
+section.events > div {
   display: flex;
   align-items: center;
 }
-
-section.events>div>.image {
+section.events > div > .image {
   width: 40%;
 }
-
-section.events>div>.image img {
+@media (max-width: 767px) {
+  section.events > div > .image {
+    display: none;
+  }
+}
+@media (min-width: 767px) and (max-width: 991px) {
+  section.events > div > .image {
+    display: none;
+  }
+}
+section.events > div > .image img {
   max-width: 100%;
 }
-
-section.events>div>.info {
+section.events > div > .info {
   width: 60%;
   text-align: center;
   display: flex;
   flex-direction: column;
   gap: 32px;
 }
-
-section.events>div>.info>.time {
+@media (max-width: 767px) {
+  section.events > div > .info {
+    width: 100%;
+  }
+}
+@media (min-width: 767px) and (max-width: 991px) {
+  section.events > div > .info {
+    width: 100%;
+  }
+}
+section.events > div > .info > .time {
   margin: auto;
   display: flex;
   gap: 16px;
 }
-
-section.events>div>.info>.time>div {
+@media (max-width: 767px) {
+  section.events > div > .info > .time {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+section.events > div > .info > .time > div {
   text-align: center;
   min-width: 100px;
   border: 1px solid #2196f3;
   transition: 0.3s;
   border-radius: 8px;
 }
-
-section.events>div>.info>.time>div .num {
+section.events > div > .info > .time > div .num {
   padding: 24px 12px;
   color: #2196f3;
   font-size: 3rem;
 }
-
-section.events>div>.info>.time>div .duration {
+section.events > div > .info > .time > div .duration {
   padding: 8px 16px;
   border-top: 1px solid #2196f3;
 }
-
-section.events>div>.info>.time>div:hover {
+section.events > div > .info > .time > div:hover {
   background-color: #f7f7f7;
 }
-
-section.events>div>.info>h2 {
+section.events > div > .info > h2 {
   font-size: 2rem;
 }
-
-section.events>div>.info>p {
+@media (max-width: 767px) {
+  section.events > div > .info > h2 {
+    font-size: 1.5rem;
+  }
+}
+section.events > div > .info > p {
   width: 80%;
   margin: auto;
   line-height: 1.5;
@@ -1057,61 +1040,51 @@ section.events>div>.info>p {
 section.plans {
   background-color: #ececec;
 }
-
-section.plans>div {
+section.plans > div {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 48px;
+  justify-content: center;
 }
-
-section.plans>div>div {
+section.plans > div > div {
   background-color: #fff;
   box-shadow: 0 0 20px rgba(51, 51, 51, 0.2666666667);
   text-align: center;
   padding: 24px 0;
   transition: 0.3s;
 }
-
-section.plans>div>div:hover {
+section.plans > div > div:hover {
   background-color: #f7f7f7;
 }
-
-section.plans>div>div>.image {
+section.plans > div > div > .image {
   margin-top: 24px;
 }
-
-section.plans>div>div>.image img {
+section.plans > div > div > .image img {
   margin: auto;
   max-width: 30%;
 }
-
-section.plans>div>div>h2 {
+section.plans > div > div > h2 {
   color: #2196f3;
   font-size: 3rem;
   margin: 32px 0 16px;
 }
-
-section.plans>div>div>p {
+section.plans > div > div > p {
   color: #777;
 }
-
-section.plans>div>div .info {
+section.plans > div > div .info {
   margin: 20px 0;
 }
-
-section.plans>div>div .info>div {
+section.plans > div > div .info > div {
   border-top: 0.5px solid #2196f3;
   display: flex;
   gap: 10px;
   padding: 16px;
 }
-
-section.plans>div>div .info>div>i {
+section.plans > div > div .info > div > i {
   font-weight: 600;
   color: #2196f3;
 }
-
-section.plans>div>div button {
+section.plans > div > div button {
   padding: 12px 14px;
   border: 2px solid #2196f3;
   border-radius: 8px;
@@ -1119,62 +1092,61 @@ section.plans>div>div button {
   color: #2196f3;
   transition: 0.3s;
 }
-
-section.plans>div>div button:hover {
+section.plans > div > div button:hover {
   background-color: #2196f3;
   color: #fff;
 }
 
-section.videos>div {
+section.videos > div {
   border: 2px solid #ececec;
   display: flex;
 }
-
-section.videos>div .left {
+@media (max-width: 767px) {
+  section.videos > div {
+    flex-direction: column;
+  }
+}
+section.videos > div .left {
   width: 25%;
 }
-
-section.videos>div .left>h4 {
+@media (max-width: 767px) {
+  section.videos > div .left {
+    width: 100%;
+  }
+}
+section.videos > div .left > h4 {
   padding: 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #d5d5d5;
 }
-
-section.videos>div .left>h4>p {
+section.videos > div .left > h4 > p {
   color: #222;
 }
-
-section.videos>div .left>h4>i {
+section.videos > div .left > h4 > i {
   color: #222;
 }
-
-section.videos>div .left>div {
+section.videos > div .left > div {
   padding: 24px 16px;
   transition: 0.3s;
   border-top: 0.5px solid #d5d5d5;
   cursor: pointer;
 }
-
-section.videos>div .left>div>p {
+section.videos > div .left > div > p {
   transition: 0.3s;
   margin-bottom: 12px;
 }
-
-section.videos>div .left>div>span {
+section.videos > div .left > div > span {
   color: #777;
 }
-
-section.videos>div .left>div:hover {
+section.videos > div .left > div:hover {
   background-color: #ececec;
 }
-
-section.videos>div .left>div:hover>p {
+section.videos > div .left > div:hover > p {
   color: #2196f3;
 }
-
-section.videos>div .right {
+section.videos > div .right {
   width: 75%;
   display: flex;
   flex-direction: column;
@@ -1183,12 +1155,15 @@ section.videos>div .right {
   background-color: #ececec;
   border-left: 1px solid #d5d5d5;
 }
-
-section.videos>div .right img {
+@media (max-width: 767px) {
+  section.videos > div .right {
+    width: 100%;
+  }
+}
+section.videos > div .right img {
   max-width: 100%;
 }
-
-section.videos>div .right>p {
+section.videos > div .right > p {
   padding: 16px;
   background-color: #fff;
 }
@@ -1200,25 +1175,29 @@ main h2 {
   width: fit-content;
   z-index: 1;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   letter-spacing: 1.1px;
   font-size: 2rem;
+}
+@media (max-width: 767px) {
+  main h2 {
+    font-size: 1.5rem;
+  }
 }
 
 section.stats {
   background-color: #ececec;
 }
-
-section.stats>div {
+section.stats > div {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 32px;
+  justify-content: center;
   margin-top: 24px;
   margin-bottom: 48px;
 }
-
-section.stats>div>div {
+section.stats > div > div {
   box-shadow: 0 0 20px rgba(51, 51, 51, 0.2666666667);
   padding: 24px 48px;
   background-color: #f7f7f7;
@@ -1230,9 +1209,7 @@ section.stats>div>div {
   transition: 0.3s;
   position: relative;
 }
-
-section.stats>div>div::before,
-section.services>div section.stats>div.card>div.info::after {
+section.stats > div > div::before, section.services > div section.stats > div.card > div.info::after {
   position: absolute;
   content: "";
   width: 2px;
@@ -1242,8 +1219,7 @@ section.services>div section.stats>div.card>div.info::after {
   background-color: #2196f3;
   transition: 0.5s;
 }
-
-section.stats>div>div::after {
+section.stats > div > div::after {
   position: absolute;
   content: "";
   width: 2px;
@@ -1253,29 +1229,22 @@ section.stats>div>div::after {
   background-color: #2196f3;
   transition: 0.5s;
 }
-
-section.stats>div>div:hover {
+section.stats > div > div:hover {
   background-color: #fff;
 }
-
-section.stats>div>div:hover::before,
-section.services>div section.stats>div.card>div.info:hover::after {
+section.stats > div > div:hover::before, section.services > div section.stats > div.card > div.info:hover::after {
   height: 100%;
 }
-
-section.stats>div>div:hover::after {
+section.stats > div > div:hover::after {
   height: 100%;
 }
-
-section.stats>div>div>i {
+section.stats > div > div > i {
   font-size: 2.5rem;
 }
-
-section.stats>div>div h3 {
+section.stats > div > div h3 {
   font-size: 4rem;
 }
-
-section.stats>div>div p {
+section.stats > div > div p {
   color: #2196f3;
   font-size: 1.25rem;
   font-style: italic;
@@ -1285,7 +1254,16 @@ section.discount {
   display: flex;
   padding: 0;
 }
-
+@media (max-width: 767px) {
+  section.discount {
+    flex-direction: column;
+  }
+}
+@media (min-width: 767px) and (max-width: 991px) {
+  section.discount {
+    flex-direction: column;
+  }
+}
 section.discount .disc {
   background-color: #2196f3;
   display: flex;
@@ -1297,64 +1275,85 @@ section.discount .disc {
   width: 50%;
   color: #fff;
 }
-
-section.discount .disc>h2 {
-  font-size: 3rem;
+@media (max-width: 767px) {
+  section.discount .disc {
+    width: 100%;
+  }
 }
-
-section.discount .disc>p {
+@media (min-width: 767px) and (max-width: 991px) {
+  section.discount .disc {
+    width: 100%;
+  }
+}
+section.discount .disc > h2 {
+  font-size: 2.5rem;
+}
+@media (max-width: 767px) {
+  section.discount .disc > h2 {
+    font-size: 1.5rem;
+  }
+}
+section.discount .disc > p {
   width: 80%;
   line-height: 1.5;
   text-align: center;
 }
-
 section.discount .disc img {
   width: 50%;
 }
-
-section.discount>.form {
+section.discount > .form {
   display: flex;
   flex-direction: column;
   width: 50%;
   align-items: center;
   justify-content: center;
   gap: 48px;
+  padding-top: 72px;
+  padding-bottom: 72px;
 }
-
-section.discount>.form>h2 {
-  font-size: 3rem;
+@media (max-width: 767px) {
+  section.discount > .form {
+    width: 100%;
+  }
 }
-
-section.discount>.form>form {
+@media (min-width: 767px) and (max-width: 991px) {
+  section.discount > .form {
+    width: 100%;
+  }
+}
+section.discount > .form > h2 {
+  font-size: 2.5rem;
+}
+@media (max-width: 767px) {
+  section.discount > .form > h2 {
+    font-size: 2rem;
+  }
+}
+section.discount > .form > form {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
-
-section.discount>.form>form * {
+section.discount > .form > form * {
   padding: 16px;
   background-color: #ececec;
   width: 340px;
   border-bottom: 1px solid #2196f3;
 }
-
-section.discount>.form>form textarea {
+section.discount > .form > form textarea {
   height: 180px;
 }
-
-section.discount>.form>form textarea:focus {
+section.discount > .form > form textarea:focus {
   outline: none;
 }
-
-section.discount>.form>form input:last-child {
+section.discount > .form > form input:last-child {
   background-color: #2196f3;
   color: #fff;
   cursor: pointer;
   font-weight: bold;
   font-size: 1.5rem;
 }
-
-section.discount>.form>form input:last-child:hover {
+section.discount > .form > form input:last-child:hover {
   opacity: 0.9;
 }
 
@@ -1365,20 +1364,17 @@ footer {
   border-top: 2px solid #777;
   text-align: center;
 }
-
 footer span {
   color: #2196f3;
 }
-
-footer>.icons {
+footer > .icons {
   display: flex;
   margin: auto;
   width: -moz-fit-content;
   width: fit-content;
   gap: 24px;
 }
-
-footer>.icons>i {
+footer > .icons > i {
   background-color: #777;
   width: 48px;
   height: 48px;
@@ -1387,17 +1383,12 @@ footer>.icons>i {
   cursor: pointer;
   transition: 0.3s;
 }
-
-footer>.icons>i:hover {
+footer > .icons > i:hover {
   background-color: #bd2c00;
 }
-
-footer>.icons>i:first-child:hover {
+footer > .icons > i:first-child:hover {
   background-color: #1877f2;
 }
-
-footer>.icons>i:last-child:hover {
+footer > .icons > i:last-child:hover {
   background-color: #0a66c2;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
