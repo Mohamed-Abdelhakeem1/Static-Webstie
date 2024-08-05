@@ -16,7 +16,21 @@ Array.from(land).forEach((section) => {
   });
 });
 
-// let topBtn = document.getElementById("topBtn");
-// topBtn.addEventListener("click", () => {
-//   document.documentElement.scrollTop = 0;
-// });
+let offsetHeight = document.documentElement.offsetHeight;
+let clientH = document.documentElement.clientHeight;
+let progressSpan = document.getElementById("scroll");
+let toTopBtn = document.getElementById("topBtn");
+toTopBtn.style.right = "-50px";
+
+window.addEventListener("scroll", () => {
+  let scrollTop = document.documentElement.scrollTop;
+  let progressValue = Math.round((scrollTop * 100) / (offsetHeight - clientH));
+  progressSpan.style.width = progressValue + "%";
+  if (scrollTop >= 1000) {
+    toTopBtn.style.right = "20px";
+  } else {
+    toTopBtn.style.right = "-50px";
+  }
+});
+
+let skillsSec = document.getElementById("skills");

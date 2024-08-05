@@ -51,19 +51,24 @@ textarea {
     width: 90%;
   }
 }
-@media (min-width: 767px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 991px) {
   .container {
-    width: 85%;
+    width: 720px;
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .container {
-    width: 82%;
+    width: 960px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1200px) and (max-width: 1399px) {
   .container {
-    width: 80%;
+    width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    width: 1320px;
   }
 }
 
@@ -143,10 +148,20 @@ section:not(.landing) {
   padding: 60px 0;
 }
 
+span#scroll {
+  position: fixed;
+  height: 4px;
+  top: 0;
+  left: 0;
+  background-color: #2196f3;
+  z-index: 9999;
+  width: 0;
+  transition: all 0.5s;
+}
+
 #topBtn {
   position: fixed;
   bottom: 20px;
-  right: 20px;
   background-color: #2196f3;
   cursor: pointer;
   width: 50px;
@@ -156,7 +171,7 @@ section:not(.landing) {
   line-height: 55px;
   transition: 0.3s;
   animation: upBtn 0.4s alternate infinite;
-  z-index: 98;
+  z-index: 9999;
 }
 #topBtn:hover {
   background-color: #0070d0;
@@ -244,7 +259,7 @@ nav > div > aside {
     justify-content: center;
   }
 }
-@media (min-width: 767px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 991px) {
   nav > div > aside {
     justify-content: center;
   }
@@ -257,7 +272,7 @@ nav > div > aside img {
     display: none;
   }
 }
-@media (min-width: 767px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 991px) {
   nav > div > aside img {
     display: none;
   }
@@ -275,7 +290,7 @@ nav > div > aside > div.dropLinks {
     width: 100%;
   }
 }
-@media (min-width: 767px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 991px) {
   nav > div > aside > div.dropLinks {
     justify-content: space-between;
     gap: 96px;
@@ -359,7 +374,7 @@ section.landing > div {
     text-align: center;
   }
 }
-@media (min-width: 767px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 991px) {
   section.landing > div {
     flex-direction: column;
     justify-content: center;
@@ -402,7 +417,7 @@ section.landing > div .info p {
     width: 100%;
   }
 }
-@media (min-width: 767px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 991px) {
   section.landing > div .info p {
     width: 100%;
   }
@@ -885,7 +900,7 @@ section.how > div > .image {
     display: none;
   }
 }
-@media (min-width: 767px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 991px) {
   section.how > div > .image {
     display: none;
   }
@@ -901,7 +916,7 @@ section.how > div .work-steps {
     width: 100%;
   }
 }
-@media (min-width: 767px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 991px) {
   section.how > div .work-steps {
     width: 100%;
   }
@@ -966,7 +981,7 @@ section.events > div > .image {
     display: none;
   }
 }
-@media (min-width: 767px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 991px) {
   section.events > div > .image {
     display: none;
   }
@@ -986,7 +1001,7 @@ section.events > div > .info {
     width: 100%;
   }
 }
-@media (min-width: 767px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 991px) {
   section.events > div > .info {
     width: 100%;
   }
@@ -1259,7 +1274,7 @@ section.discount {
     flex-direction: column;
   }
 }
-@media (min-width: 767px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 991px) {
   section.discount {
     flex-direction: column;
   }
@@ -1280,7 +1295,7 @@ section.discount .disc {
     width: 100%;
   }
 }
-@media (min-width: 767px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 991px) {
   section.discount .disc {
     width: 100%;
   }
@@ -1316,7 +1331,7 @@ section.discount > .form {
     width: 100%;
   }
 }
-@media (min-width: 767px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 991px) {
   section.discount > .form {
     width: 100%;
   }

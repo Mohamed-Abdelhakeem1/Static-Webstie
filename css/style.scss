@@ -5,11 +5,20 @@
 section:not(.landing) {
   @include SectionPadding;
 }
+span#scroll {
+  position: fixed;
+  height: 4px;
+  top: 0;
+  left: 0;
+  background-color: $main;
+  z-index: 9999;
+  width: 0;
+  transition: all 0.5s;
+}
 
 #topBtn {
   position: fixed;
   bottom: 20px;
-  right: 20px;
   background-color: $main;
   cursor: pointer;
   width: 50px;
@@ -19,7 +28,7 @@ section:not(.landing) {
   line-height: 55px;
   transition: 0.3s;
   animation: upBtn 0.4s alternate infinite;
-  z-index: 98;
+  z-index: 9999;
   &:hover {
     background-color: #0070d0;
   }

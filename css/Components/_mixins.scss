@@ -4,7 +4,7 @@
       @content;
     }
   } @else if $device == small {
-    @media (min-width: 767px) and (max-width: 991px) {
+    @media (min-width: 768px) and (max-width: 991px) {
       @content;
     }
   } @else if $device == medium {
@@ -12,7 +12,11 @@
       @content;
     }
   } @else if $device == large {
-    @media (min-width: 1200px) {
+    @media (min-width: 1200px) and (max-width: 1399px) {
+      @content;
+    }
+  } @else if $device == Xlarge {
+    @media (min-width: 1400px) {
       @content;
     }
   }
